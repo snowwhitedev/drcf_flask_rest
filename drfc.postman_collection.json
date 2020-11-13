@@ -1,0 +1,54 @@
+{
+	"info": {
+		"_postman_id": "5fc047ad-1d91-4dc0-86de-d6c7dbc55bbe",
+		"name": "drfc",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CreateService",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"namdde2\",\r\n    \"description\": \"description description description description description description description\",\r\n    \"status\": \"status\",\r\n    \"image\": \"https://via.placeholder.com/300\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/v1/service",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"service"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetServices",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
