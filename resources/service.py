@@ -29,3 +29,7 @@ class Service(Resource):
             return {"data": service_list_schema.dump(ServiceModel.get_all())}, 200
         except:
             return {"message": "error"}, 400
+
+    @classmethod
+    def delete(cls, id: int):
+        return id

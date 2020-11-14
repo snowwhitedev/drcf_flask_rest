@@ -5,6 +5,8 @@ from db import db
 from resources.test import Test
 from resources.test import TestList
 from resources.service import Service
+from resources.source_service import SourceService
+from resources.source_service import SourceServiceFilter
 
 
 app = Flask(__name__)
@@ -21,6 +23,8 @@ def create_tables():
 
 api.add_resource(TestList, "/api/v1/test")
 api.add_resource(Service, "/api/v1/service")
+api.add_resource(SourceService, "/api/v1/source_service")
+api.add_resource(SourceServiceFilter, "/api/v1/source_by_service/<int:service_id>")
 
 if __name__ == "__main__":
     db.init_app(app)
