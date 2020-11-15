@@ -10,7 +10,6 @@ class Service(Resource):
     @classmethod
     def post(cls):
         data = request.get_json()
-        print(data)
         service = ServiceModel(
             name=data["name"],
             description=data["description"],
@@ -21,7 +20,7 @@ class Service(Resource):
             service.save_to_db()
             return {"message": "OK"}, 200
         except:
-            return {"message": "Error"}, 400
+            return {"message": "error"}, 400
 
     @classmethod
     def get(cls):
