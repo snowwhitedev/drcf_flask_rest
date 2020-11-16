@@ -86,7 +86,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"role\": \"statistics\"\r\n}",
+							"raw": "",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -94,7 +94,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://127.0.0.1:5000/api/v1/inventories",
+							"raw": "http://127.0.0.1:5000/api/v1/inventories/supervisor",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -106,7 +106,8 @@
 							"path": [
 								"api",
 								"v1",
-								"inventories"
+								"inventories",
+								"supervisor"
 							]
 						}
 					},

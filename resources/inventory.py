@@ -70,9 +70,9 @@ class InventoryAction(Resource):
 
 class InventoryList(Resource):
     @classmethod
-    def get(cls):
-        role_json = request.get_json()
-        role = role_json["role"]
+    def get(cls, role: str):
+        # role_json = request.get_json()
+        # role = role_json["role"]
         print(role)
         try:
             if role == USER_ROLES["worker"]:

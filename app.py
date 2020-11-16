@@ -30,7 +30,7 @@ api.add_resource(SourceServiceFilter, "/api/v1/source_by_service/<int:service_id
 api.add_resource(Category, "/api/v1/category")
 api.add_resource(Inventory, "/api/v1/inventory")
 api.add_resource(InventoryAction, "/api/v1/inventory/<int:inventory_id>")
-api.add_resource(InventoryList, "/api/v1/inventories")
+api.add_resource(InventoryList, "/api/v1/inventories/<string:role>")
 
 if __name__ == "__main__":
     db.init_app(app)
