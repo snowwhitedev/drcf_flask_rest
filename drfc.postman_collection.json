@@ -15,7 +15,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"code\": \"f230fh0g3\",\r\n    \"name\": \"Bamboo Watch\",\r\n    \"description\": \"Product Description\",\r\n    \"image\": \"bamboo-watch.jpg\",\r\n    \"price\": 65,\r\n    \"category\": \"Accessories\",\r\n    \"inventoryStatus\": \"INSTOCK\",\r\n    \"rating\": 5\r\n}",
+							"raw": "{\r\n    \"code\": \"f230fh0g3\",\r\n    \"name\": \"Bamboo Watch\",\r\n    \"description\": \"Product Description\",\r\n    \"image\": \"bamboo-watch.jpg\",\r\n    \"price\": 65,\r\n    \"category\": \"Accessories\",\r\n    \"inventoryStatus\": \"INSTOCK\",\r\n    \"rating\": 5,\r\n    \"role\": \"worker\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
