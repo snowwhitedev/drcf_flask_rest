@@ -3,6 +3,9 @@ from flask_restful import Resource
 from models.inventory import InventoryModel
 from schemas.inventory import InventorySchema
 from settings.constant import USER_ROLES
+from models.category import CategoryModel
+from schemas.category import CategorySchema
+from settings.constant import INVENTORY_STATUS
 
 worker_items = ["id", "code", "name", "description", "image", "category", "inventoryStatus", "role"]
 supervisor_items = ["id", "code", "name", "description", "image", "category", "inventoryStatus", "role", "price"]
@@ -11,8 +14,10 @@ statistics_items = ["id", "code", "name", "description", "image", "category", "i
 inventory_schema = InventorySchema()
 inventory_list_schema = InventorySchema(many=True)
 inventory_worker_schema = InventorySchema(many=True, only=worker_items)
-inventory_worker_schema = InventorySchema(many=True, only=supervisor_items)
+inventory_supervisor_schema = InventorySchema(many=True, only=supervisor_items)
 inventory_statistics_schema = InventorySchema(many=True, only=statistics_items)
+
+category_schema = CategorySchema(many=True)
 
 
 class Inventory(Resource):
@@ -71,10 +76,26 @@ class InventoryList(Resource):
         print(role)
         try:
             if role == USER_ROLES["worker"]:
-                return {"data": inventory_list_schema.dump(InventoryModel.get_worker_inventory())}, 200
+                data = inventory_worker_schema.dump(InventoryModel.get_worker_inventory())
+                editable = {}
+                return {"data": data, "editable": editable}, 200
             if role == USER_ROLES["supervisor"]:
-                return {"data": inventory_list_schema.dump(InventoryModel.get_supervisor_inventory())}, 200
+                data = inventory_supervisor_schema.dump(InventoryModel.get_supervisor_inventory())
+                editable = {
+                    "category": category_schema.dump(CategoryModel.get_all())
+                }
+
+                return {"data": data, "editable": editable}, 200
             if role == USER_ROLES["statistics"]:
-                return {"data": inventory_list_schema.dump(InventoryModel.get_all())}, 200
+                data = inventory_statistics_schema.dump(InventoryModel.get_all())
+                categories = category_schema.dump(CategoryModel.get_all())
+                status = INVENTORY_STATUS
+                return {
+                           "data": data,
+                           "editable": {
+                               "category": categories,
+                               "status": status
+                           }
+                       }, 200
         except:
             return {"message": "error"}, 400
