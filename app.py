@@ -1,7 +1,9 @@
 from flask import Flask, render_template
+from flask_cors import CORS
 from flask_restful import Api
 
 from db import db
+from ma import ma
 from resources.test import TestList
 from resources.service import Service
 from resources.source_service import SourceService
@@ -15,6 +17,7 @@ app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///data.db"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 app.config["PROPAGATE_EXCEPTIONS"] = True
+CORS(app)
 api = Api(app)
 
 
@@ -38,6 +41,7 @@ def index():
     return render_template("index.html")
 
 
+db.init_app(app)
 if __name__ == "__main__":
-    db.init_app(app)
+    ma.init_app(app)
     app.run(port=5000, debug=True)
