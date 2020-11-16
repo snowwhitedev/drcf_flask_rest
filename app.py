@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 from flask_restful import Api
 
 from db import db
@@ -31,6 +31,12 @@ api.add_resource(Category, "/api/v1/category")
 api.add_resource(Inventory, "/api/v1/inventory")
 api.add_resource(InventoryAction, "/api/v1/inventory/<int:inventory_id>")
 api.add_resource(InventoryList, "/api/v1/inventories/<string:role>")
+
+
+@app.route("/")
+def index():
+    return render_template("index.html")
+
 
 if __name__ == "__main__":
     db.init_app(app)

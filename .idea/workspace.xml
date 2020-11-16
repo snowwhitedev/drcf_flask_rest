@@ -2,8 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f2c894d7-e682-4009-9ec3-0882c0ac2a03" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/static/assets/img/B2B.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/img/BPM.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/img/Commissionnement.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/img/Facturation Encaissment2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/img/Logo_SFR_2014.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/img/credit_management.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/products-small.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/inventory.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/inventory.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,6 +24,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -24,7 +34,14 @@
   <component name="ProjectId" id="1kBh48jQicULzaRwL6xJJJHpHbt" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\mywork\2020\11Nov\1112Flask\work\drfc_cock_api" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
