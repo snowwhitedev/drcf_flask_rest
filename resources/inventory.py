@@ -94,7 +94,7 @@ class InventoryList(Resource):
                            "data": data,
                            "editable": {
                                "category": categories,
-                               "status": status
+                               "inventoryStatus": status
                            }
                        }, 200
         except:
